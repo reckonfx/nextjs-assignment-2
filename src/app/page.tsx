@@ -1,101 +1,95 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="bg-[#252B42] text-white w-full h-auto font-">
+      {/* Navigation Section Starts Here */}
+      <div className="md:w-[1322px] h-[91px] mx-auto">
+        <nav className="md:flex items-center justify-between">
+          <div className="md:w-[187px] h-[58px] mt-4 ml-[134px]">
+            <h3 className="md:font-serif text-[24px] leading-8 tracking-wider font-bold mt-3">
+              BrandName
+            </h3>
+          </div>
+          <div className="md:w-[815px] h-[58px] mt-4 ml-[230px] flex items-center justify-between">
+            <ul className="flex items-center gap-5 mt-4 font-semibold">
+              <li><Link href={"/"}>Home</Link></li>
+              <li><Link href={"/"}>Product</Link></li>
+              <li><Link href={"/"}>Pricing</Link></li>
+              <li><Link href={"/"}>Contact</Link></li>
+            </ul>
+            <div className="flex w-48 h-14 gap-0 font-semibold">
+              <button className="flex-1">Login</button>
+              <button className="flex-1 bg-[#23A6F0] rounded-md text-center text-white font-bold">Join Us</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+      {/* End of Navigation Section */}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero Section Starts Here */}
+      <section className="flex justify-center items-center  ">
+        {/* Inner Container */}
+        <div className="flex flex-col items-center w-[1180px] p-20">
+          <div className="flex flex-col gap-10 w-[701px] h-[496] p-10">
+            <h5 className="w-full text-center text-[16px] leading-6 tracking-[0.1px] text-[#23A6F0]">Welcome</h5>
+            <h1 className="font-bold text-[58px] leading-[80px] tracking-wide text-center">
+              Selling on the internet like a pro
+            </h1>
+            <h4 className="text-lg text-center">
+              We know how large objects will act, but things on a small scale just do not act that way.
+            </h4>
+            <div className="space-x-3 flex justify-center">
+              <button className="w-[193px] h-[52px] text-sm rounded-md bg-[#23A6F0] font-bold leading-6 tracking-wide text-white">
+                Get Quote Now
+              </button>
+              <button className="w-[162px] h-[52px] rounded-md border-[#23A6F0] border-2 bg-black text-[#23A6F0] font-bold text-sm leading-6 tracking-wide">
+                Learn More
+              </button>
+            </div>
+
+            
+          </div>
+          {/* cards section */}
+          <div className="h-[292px] w-full flex items-center gap-6 mt-10 justify-between">
+            {/* card1 */}
+            <div className=" bg-white h-full w-1/3 pt-9 pr-10 pb-9 pl-10 ">
+            <div className="w-[70px] h-[76px] rounded-[10px] bg-[#FFDCD1] "></div>
+            <h5 className="w-[135px] h-[24px] text-[16px] font-bold leading-6 tracking-tighter text-[#252B42] mt-5">training Courses</h5>
+            <div className="w-12 h-[2px] bg-[#E74040] mt-5"></div>
+            <p className="w-[222px] h-[60px] text-sm font-normal leading-5 tracking-wide text-[#737373] mt-5">The gradual accumulation of 
+                information about atomic and small-scale behaviour...</p>
+            
+            </div>
+            {/* card2 */}
+            <div className=" bg-white h-full w-1/3">
+            <div className=" bg-white h-full w-1/3 pt-9 pr-10 pb-9 pl-10 ">
+            <div className="w-[70px] h-[76px] rounded-[10px] bg-[#B9EAA8] "></div>
+            <h5 className="w-[168px] h-[24px] text-[16px] font-bold leading-6 tracking-tighter text-[#252B42] mt-5">2,769 online courses</h5>
+            <div className="w-12 h-[2px] bg-[#E74040] mt-5"></div>
+            <p className="w-[222px] h-[60px] text-sm font-normal leading-5 tracking-wide text-[#737373] mt-5">The gradual accumulation of 
+                information about atomic and small-scale behaviour...</p>
+            
+            </div>
+            </div>
+            {/* card 3 */}
+            <div className=" bg-[#23A6F0] h-full w-1/3">
+            <div className=" bg-[#23A6F0] h-full w-1/3 pt-9 pr-10 pb-9 pl-10 ">
+            <div className="w-[70px] h-[76px] rounded-[10px] bg-white "></div>
+            <h5 className="w-[168px] h-[24px] text-[16px] font-bold leading-6 tracking-tighter text-white mt-5">2,769 online courses</h5>
+            <div className="w-12 h-[2px] bg-[#E74040] mt-5"></div>
+            <p className="w-[222px] h-[60px] text-sm font-normal leading-5 tracking-wide text-white mt-5">The gradual accumulation of 
+                information about atomic and small-scale behaviour...</p>
+            
+            </div>
+            </div>
+
+            </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        
+      </section>
+      {/* End of Hero Section */}
+     
+    </main>
   );
 }
